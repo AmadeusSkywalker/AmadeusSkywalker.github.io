@@ -1,9 +1,9 @@
 /* work of Amadeus*/
 body{
-   margin: 0;
    padding: 0; 
    background-color: white;
    overflow-x:hidden;
+   margin:0;
 }
 
 .navbar {
@@ -45,12 +45,14 @@ body{
   border-radius: 100%;
   position: relative;
   margin-top:100px;
-  margin-left:120px;
+  /*margin-left:120px;*/
+  margin-left:8%;
 }
 
 #name{
   position: relative;
-  margin-left:580px;
+  /*margin-left:580px;*/
+  margin-left:45%;
   margin-top: -300px;
   font-size: 50px;
   font-family: 'PT Serif', serif;
@@ -62,7 +64,8 @@ body{
   display: flexbox;
   flex-direction: row;
   position: relative;
-  margin-left:570px;
+  /*margin-left:570px;*/
+  margin-left:44%;
 }
 
 #gmail{
@@ -86,7 +89,7 @@ body{
    position: relative;
    display:flexbox;
    flex-direction: column;
-   margin-left:1100px;
+   margin-left:85%;
    margin-top:-250px;
 }
 
@@ -136,6 +139,6 @@ body{
   font-family: 'PT Serif', serif;
   position: relative;
   text-align: center;
-  margin-left: 320px;
+  margin-left: 25%;
   font-size: 20px;
 }
