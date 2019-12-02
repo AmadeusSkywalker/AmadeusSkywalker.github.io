@@ -51,6 +51,7 @@ body{
   flex-direction: row;
   position: absolute;
   margin-top:200px;
+  width: 100%;
 }
 
 .mypic{
@@ -60,14 +61,14 @@ body{
 
 .company{
   float: left;
-  width: 250px;
+  width: 20%;
   background-color: #FAF2F2;
-  margin-right: 100px;
+  margin-right:10%;
 }
 
 #icekredit{
   height:250px;
-  margin-left:150px;  
+  margin-left:10%;  
 }
 
 #orbital{
@@ -76,6 +77,7 @@ body{
 
 #ixl{
   height: 250px;
+  float: right;
 }
 
 .job{
