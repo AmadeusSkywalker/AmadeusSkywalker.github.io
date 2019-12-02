@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/styles/travel.css">
+	</head>
+	<body>
+		    <div class="navbar">
+           <a href="Contact.html">Contact me</a>
+           <a href="Travel.html">Travel</a>
+           <a href="Work.html">Work</a>
+           <a href="index.html">About</a>
+        </div>
+
+        <div class="content">
+            <div id="profile">
+                <img id="coverphoto" src="assets/images/sunset.jpg">
+
+                <h1 id="title">I enjoy a life on the road.</h1>
+                <div class="birdcontainer", id="containerone">
+                  <div class="bird", id="birdone"></div>
+                </div>
+                <div class="birdcontainer", id="containertwo">
+                  <div class="bird", id="birdtwo"></div>
+                </div>
+                <h1 id="titleTwo">See some places I've been to.</h1>
+                
+                <div id="carousel">
+                    <div id="carousel-controls">
+                        <button id="button-previous" class="hidden">
+                            <img src="assets/images/leftarrow.png" alt="">
+                        </button>
+                        <button id="button-next">
+                            <img src="assets/images/rightarrow.png" alt="">
+                        </button>    
+                    </div>
+                    <div id="carousel-image-row">
+                        
+                        <div class="carousel-image">
+                            <img src="assets/images/tahoe.jpg" alt="">
+                            <h1 class="city">Lake Tahoe, United States</h1>
+                        </div>
+                        
+                        <div class="carousel-image">
+                            <img src="assets/images/seattle.jpg" alt="">
+                            <h1 class="city">Seattle, United States</h1>
+                        </div>
+                        
+                        <div class="carousel-image">
+                            <img src="assets/images/shanghai.jpg" alt="">
+                            <h1 class="city">Shanghai, China</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/athens.jpg" alt="">
+                            <h1 class="city">Athens, Greece</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/chengdu.jpg" alt="">
+                            <h1 class="city">Chengdu, China</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/losangels.jpg" alt="">
+                            <h1 class="city">Los Angeles, United States</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/moscow.jpg" alt="">
+                            <h1 class="city">Moscow, Russia</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/Saint Petersburg.jpg" alt="">
+                            <h1 class="city">Saint Petersburg, Russia</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/sandiego.jpg" alt="">
+                            <h1 class="city">San Diego, United States</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/Santorini.jpg" alt="">
+                            <h1 class="city">Santorini, Greece</h1>
+                        </div>
+
+                        <div class="carousel-image">
+                            <img src="assets/images/stanford.jpg" alt="">
+                            <h1 class="city">Palo Alto, United States</h1>
+                        </div>
+                    </div>
+                </div>
+                <script src="assets/js/script.js"></script>
+                
+                <div id="hometown">
+                     <h1 id="titleThree">See where I came from.</h1>
+                     <div class = "Map">
+                          <div id="googleMap" style="width:80%;height:500px;"></div>
+
+                          <script>
+                          function myMap() {
+                            var geocoder = new google.maps.Geocoder();
+                            var mapProp= {
+                              center:new google.maps.LatLng(37.868321,-122.257868),
+                              zoom:12,
+                            };
+                            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                            geocoder.geocode({'address': "Nanjing"}, function(results, status) {
+                                if (status === 'OK') {
+                                  map.setCenter(results[0].geometry.location);
+                                  marker=results[0].geometry.location;
+                                } else {
+                                  alert('Geocode was not successful for the following reason: ' + status);
+                                }
+                              });
+                              
+                          }
+
+                          </script>
+                          
+                          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRn3l1dHyoDyODfb6Liaphz4MNKf3bZcc&callback=myMap"></script>
+                    </div>
+                </div>
+              
+
+            </div>    
+        </div>
+    <script type="text/javascript" src="assets/scripts/travel.js"></script>
+	</body>
+</html>

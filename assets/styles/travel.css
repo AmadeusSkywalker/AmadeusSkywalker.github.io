@@ -1,0 +1,220 @@
+/* work of Amadeus*/
+body{
+   margin: 0;
+   padding: 0; 
+   background-color: #D3CFDD;
+   overflow-x:hidden;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #ECEAF7;
+  display:block;
+  float: left;
+  width: 100%;
+  margin-top: 0px;
+  border: 0;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  margin-right: 40px;
+  line-height: 60px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#profile{
+  width: 100%;
+  height:2200px;
+  background-color: #D3CFDD;;
+}
+
+#title{
+  font-family: 'PT Serif', serif;
+  position: absolute;
+  margin-top:-100px;
+  margin-left:38%;
+}
+
+#coverphoto{
+  width: 100%;
+}
+
+/* cite: the following code is modified from the css animation svg bird online, I really like the feature!*/
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+  will-change: background-position;
+  position: relative;
+}
+
+.bird-container {
+	will-change: transform;	
+}
+
+#birdone{
+  animation-name: fly-cycle;
+	animation-duration: 1s;
+	animation-delay: -0.5s;
+	animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+  margin-top:-600px;
+}
+
+#birdtwo{
+  animation-name: fly-cycle;
+	animation-duration: 0.9s;
+	animation-delay: -0.75s;
+	animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+  margin-top:-100px;
+}
+
+#containerone{
+  animation-name: fly-right;
+	animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+	animation-delay: 0s;
+}
+
+#containertwo{
+  animation-name: fly-right;
+	animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 16s;
+	animation-delay: 1s;
+}
+
+
+@keyframes fly-cycle {
+	100% {
+		background-position: 900px 0;
+	}
+}
+
+
+@keyframes fly-right {
+	
+	0% {
+		transform: translateX(0%);
+	}
+	
+	10% {
+		transform: translateX(10%);
+	}
+	
+	20% {
+		transform: translateX(20%);
+	}
+	
+	30% {
+		transform: translateX(30%);
+	}
+	
+	40% {
+		transform: translateX(40%);
+	}
+	
+	50% {
+		transform: translateX(50%);
+	}
+
+	60% {
+		transform: translateX(60%);
+	}
+	
+	100% {
+		transform: translateX(90%);
+  }
+}
+
+
+#titletwo{
+  font-family: 'PT Serif', serif;
+  position: relative;
+  margin-top:500px;
+  margin-left:35%;
+}
+
+
+#carousel,
+.carousel-image {
+  width: 600px;
+  height: 600px;
+}
+
+
+#carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top:60px;
+  margin-left:28%;
+  background-color: #D3CFDD;
+}
+
+
+#carousel-image-row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 0px;
+  transition: 0.5s all;
+}
+
+.carousel-image img {
+  height: 460px;
+  width: 600px;
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+
+#carousel-controls {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+#button-next,
+#button-previous {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.city{
+  font-family: 'PT Serif', serif;
+  font-size:20px;
+}
+
+#titlethree{
+  font-family: 'PT Serif', serif;
+  position: relative;
+  margin-top:-10px;
+  margin-left:35%;
+}
+
+.map{
+  margin-left: 20%;
+}
