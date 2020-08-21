@@ -16,10 +16,35 @@
         	<div id = "profile">
                 <img id="coverphoto" src="assets/images/138.jpg">
                 <h1 id="title">Let's get in touch!</h1>
-                <h2 id="email">email:spark-athenaeum@berkeley.edu</h2>
-                <h2 id="phone">phone:7072055648</h2>
-                <img id="qr" src="assets/images/QR.png">
+                <div class="container">
+                    <div class="row">
+                    <div class="column">
+                        <img src="assets/images/IMG_6164.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <form name = "input", action="POST" method="https://formspree.io/spark-athenaeum@berkeley.edu">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="business">What do you want to talk to me about?</label>
+                            <select id="business" name="business">
+                                <option value="job">Job opportunity</option>
+                                <option value="fun">Fun stuff</option>
+                                <option value="life">Widsom about life</option>
+                            </select>
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                            <input type="submit" value="Submit">
+                            <input type="hidden" name="_subject" value="You have a new message from you website"/>
+                            <input type="hidden" name="_next" value="thanks.html"/>
+                        </form>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <?php include 'contact.php';?>
 	</body>
 </html>
+
